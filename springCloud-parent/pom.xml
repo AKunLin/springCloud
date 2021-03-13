@@ -10,6 +10,7 @@
     <modules>
         <module>luakun_order</module>
         <module>luakun_item</module>
+        <module>luakun_item2</module>
     </modules>
     <packaging>pom</packaging>
     <description>所有工程的父工程统一版本管理</description>
