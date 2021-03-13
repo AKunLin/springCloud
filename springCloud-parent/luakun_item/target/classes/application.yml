@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: item
+  cloud: #nacos配置
+    nacos:
+      discovery:
+        server-addr: localhost:8848 #此为nacos地址配置
+server:
+  port: 18081
