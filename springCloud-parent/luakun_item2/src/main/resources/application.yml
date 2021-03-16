@@ -5,11 +5,5 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848 #此为nacos地址配置
-    gateway:
-      routes:
-        - id: path_route
-          uri: lb://item
-          predicates:
-            - Path=/item/**
 server:
-  port: 18084
+  port: 18083

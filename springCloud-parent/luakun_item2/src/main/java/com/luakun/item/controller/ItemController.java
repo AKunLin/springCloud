@@ -20,7 +20,7 @@ public class ItemController {
 
     @GetMapping("{itemId}")
     public OrderInfo getInfo(@PathVariable(name = "itemId") String itemId){
-        System.out.println("是我啊 我是 1 号 我先开始啦~~~~");
+        System.out.println("是我啊 我是 2 号 我先开始啦~~~~");
         OrderInfo orderInfo = new OrderInfo();
         orderInfo.setItemId(itemId);
         orderInfo.setPrice(888L);

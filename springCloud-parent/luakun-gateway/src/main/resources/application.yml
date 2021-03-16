@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  gateway:
+    # 配置全局默认过滤器
+    default-filters:
+      # 往响应过滤器中加入信息
+      - AddResponseHeader=X-Response-Default-MyName,luakun
+    routes:
+      - id: path_route # 指定一个唯一标识
+        uri: lb://item # 请求转发到的服务器的设置
+        predicates:
+          - Path=/item/** # 请求转发的条件 匹配格式 以路径方式匹配
+        filters:
+          # 请求地址添加路径前缀过滤器
+          #- PrefixPath=/item #
+          # 请求地址去除一个前缀路径
+          - StripPrefix=1
+server:
+  port: 18084
