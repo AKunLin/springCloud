@@ -20,5 +20,6 @@ spring:
           #- PrefixPath=/item #
           # 请求地址去除一个前缀路径
           - StripPrefix=1
+          - MyParam=name,luakun
 server:
   port: 18084

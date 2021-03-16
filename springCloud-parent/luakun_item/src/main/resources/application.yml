@@ -12,4 +12,4 @@ spring:
           predicates:
             - Path=/item/**
 server:
-  port: 18084
+  port: 18081
